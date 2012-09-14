@@ -25,8 +25,6 @@ do
         origin=`grep "$project" $rdir/.repo/manifest.xml | awk {'print $4'} | cut -f2 -d '"'`
         if [ "$origin" = "aokp" ]; then
             proj_credit=AOKP
-        elif [ "$origin" = "i9100" ]; then
-            proj_credit=i9100-AOKP
         elif [ "$origin" = "aosp" ]; then
             proj_credit=AOSP
         elif [ "$origin" = "cm" ]; then
