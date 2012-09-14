@@ -11,7 +11,7 @@ export WORKSPACE=$PWD
 
 if [ ! -d hudson ]
 then
-  git clone git://github.com/AOKP-i9100/hudson.git
+  git clone git://github.com/KAsp3rd/hudson.git
 fi
 
 cd hudson
