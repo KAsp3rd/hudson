@@ -58,6 +58,7 @@ export PATH=~/bin:$PATH
 
 export USE_CCACHE=1
 export BUILD_WITH_COLORS=0
+export CCACHE_COMPILERCHECK=none
 
 REPO=$(which repo)
 if [ -z "$REPO" ]
@@ -67,8 +68,8 @@ then
   chmod a+x ~/bin/repo
 fi
 
-git config --global user.name $(whoami)@$HOSTNAME
-git config --global user.email gerrit@pernici.net
+git config --global user.name KAsp3rd
+git config --global user.email casper200519@gmail.com
 
 mkdir -p $REPO_BRANCH
 cd $REPO_BRANCH
@@ -80,7 +81,7 @@ then
   CORE_BRANCH=$REPO_BRANCH
 fi
 rm -rf .repo/manifests*
-repo init -u https://github.com/AOKP-i9100/platform_manifest.git -b $CORE_BRANCH
+repo init -u https://github.com/AOKP/platform_manifest.git -b $CORE_BRANCH
 check_result "repo init failed."
 
 # make sure ccache is in PATH
