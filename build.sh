@@ -58,6 +58,7 @@ export PATH=~/bin:$PATH
 
 export USE_CCACHE=1
 export BUILD_WITH_COLORS=0
+export CCACHE_COMPILERCHECK=none
 
 REPO=$(which repo)
 if [ -z "$REPO" ]
@@ -80,7 +81,7 @@ then
   CORE_BRANCH=$REPO_BRANCH
 fi
 rm -rf .repo/manifests*
-repo init -u https://github.com/AOKP-i9100/platform_manifest.git -b $CORE_BRANCH
+repo init -u https://github.com/AOKP/platform_manifest.git -b $CORE_BRANCH
 check_result "repo init failed."
 
 # make sure ccache is in PATH
