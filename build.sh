@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DATE=$(date +%h-%d-%y)
+export DATE=$(date +%h-%d-%y)
 
 function check_result {
   if [ "0" -ne "$?" ]
