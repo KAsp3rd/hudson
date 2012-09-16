@@ -108,7 +108,7 @@ fi
 lunch $LUNCH
 check_result "lunch failed."
 
-rm -f $OUT/aokp*.zip*
+#rm -f $OUT/aokp*.zip*
 
 UNAME=$(uname)
 
