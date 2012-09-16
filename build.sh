@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+DATE=$(date +%h-%d-%y)
+
 function check_result {
   if [ "0" -ne "$?" ]
   then
@@ -108,7 +110,7 @@ fi
 lunch $LUNCH
 check_result "lunch failed."
 
-#rm -f $OUT/aokp*.zip*
+rm -f $OUT/aokp*.zip*
 
 UNAME=$(uname)
 
@@ -130,7 +132,7 @@ make $CLEAN_TYPE
 mka bacon
 check_result "Build failed."
 
-cp $OUT/aokp*.zip* $WORKSPACE/archive
+cp $OUT/aokp*${DATE}.zip $WORKSPACE/archive
 # chmod the files in case UMASK blocks permissions
 chmod -R ugo+r $WORKSPACE/archive
 
