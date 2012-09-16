@@ -43,11 +43,6 @@ then
   SYNC_PROTO=git
 fi
 
-# colorization fix in Jenkins
-export CL_PFX="\"\033[34m\""
-export CL_INS="\"\033[32m\""
-export CL_RST="\"\033[0m\""
-
 cd $WORKSPACE
 rm -rf archive
 mkdir -p archive
@@ -55,10 +50,9 @@ export BUILD_NO=$BUILD_NUMBER
 unset BUILD_NUMBER
 
 export PATH=~/bin:$PATH
-
 export USE_CCACHE=1
-export BUILD_WITH_COLORS=0
 export CCACHE_COMPILERCHECK=none
+export FAST_BUILD=1
 
 REPO=$(which repo)
 if [ -z "$REPO" ]
@@ -131,14 +125,8 @@ then
   fi
 fi
 
-if [ ! "$(ccache -s|grep -E 'max cache size'|awk '{print $4}')" = "50.0" ]
-then
-  ccache -M 50G
-fi
-
 make $CLEAN_TYPE
 # mka bacon recoveryzip recoveryimage checkapi
-export FAST_BUILD=1
 mka bacon
 check_result "Build failed."
 
