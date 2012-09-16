@@ -45,6 +45,11 @@ then
   SYNC_PROTO=git
 fi
 
+# colorization fix in Jenkins
+export CL_PFX="\"\033[34m\""
+export CL_INS="\"\033[32m\""
+export CL_RST="\"\033[0m\""
+
 cd $WORKSPACE
 rm -rf archive
 mkdir -p archive
@@ -52,6 +57,7 @@ export BUILD_NO=$BUILD_NUMBER
 unset BUILD_NUMBER
 
 export PATH=~/bin:$PATH
+export BUILD_WITH_COLORS=0
 export USE_CCACHE=1
 export CCACHE_COMPILERCHECK=none
 export FAST_BUILD=1
