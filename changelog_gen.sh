@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ydate=$(date -d '1 day ago' +"%m_%d_%Y")
+ydate=$(date -d '1 day ago' +"%m/%d/%Y")
 sdate=${1}
 cdate=`date +"%m_%d_%Y"`
 rdir=`pwd`
