@@ -8,7 +8,7 @@ rdir=`pwd`
 if [ -z "$sdate" ]; then
     echo "!!!!---- Start date not defined ----!!!!"
     echo "Please define a start date in mm/dd/yyyy format."
-    sdate=$(date -d '1 day ago' +"%m_%d_%Y")
+    read sdate
 fi
 
 # Find the directories to log
