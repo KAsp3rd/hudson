@@ -138,7 +138,7 @@ make $CLEAN_TYPE
 mka bacon
 check_result "Build failed."
 
-cp $OUT/aokp*$(DATE).zip $WORKSPACE/archive
+cp $OUT/aokp*${DATE}.zip $WORKSPACE/archive
 # chmod the files in case UMASK blocks permissions
 chmod -R ugo+r $WORKSPACE/archive
 
