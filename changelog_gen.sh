@@ -1,14 +1,13 @@
 #!/bin/sh
 
+ydate=$(date -d '1 day ago' +"%m/%d/%Y")
 sdate=${1}
 cdate=`date +"%m_%d_%Y"`
 rdir=`pwd`
 
 # Check the date start range is set
 if [ -z "$sdate" ]; then
-    echo "!!!!---- Start date not defined ----!!!!"
-    echo "Please define a start date in mm/dd/yyyy format."
-    read sdate
+    sdate=${ydate}
 fi
 
 # Find the directories to log
