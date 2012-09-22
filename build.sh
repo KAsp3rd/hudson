@@ -138,7 +138,7 @@ fi
 
 make $CLEAN_TYPE
 # mka bacon recoveryzip recoveryimage checkapi
-mka bacon
+time mka bacon
 check_result "Build failed."
 
 cp $OUT/aokp*.zip* $WORKSPACE/archive
