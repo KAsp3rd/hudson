@@ -104,7 +104,7 @@ echo Local Manifest:
 cat .repo/local_manifest.xml
 
 echo Syncing...
-repo sync -d #> /dev/null 2> /tmp/jenkins-sync-errors.txt
+repo sync -d #> /dev/null
 check_result "repo sync failed."
 echo Sync complete.
 
