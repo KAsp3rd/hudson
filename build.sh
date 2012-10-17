@@ -46,9 +46,14 @@ then
 fi
 
 # colorization fix in Jenkins
-export CL_PFX="\"\033[34m\""
-export CL_INS="\"\033[32m\""
-export CL_RST="\"\033[0m\""
+"\"\033[34m\""
+export CL_RED="\"\033[31m""
+export CL_GRN="\"\033[32m""
+export CL_YLW="\"\033[33m""
+export CL_BLU="\"\033[34m""
+export CL_MAG="\"\033[35m""
+export CL_CYN="\"\033[36m""
+export CL_RST="\"\033[0m""
 
 cd $WORKSPACE
 rm -rf archive
@@ -104,9 +109,9 @@ echo Local Manifest:
 cat .repo/local_manifest.xml
 
 #echo Syncing...
-#repo sync -d #> /dev/null
-#check_result "repo sync failed."
-#echo Sync complete.
+repo sync -d #> /dev/null
+check_result "repo sync failed."
+echo Sync complete.
 
 if [ -f $WORKSPACE/hudson/$REPO_BRANCH-setup.sh ]
 then
