@@ -103,10 +103,10 @@ cat .repo/manifests/default.xml
 echo Local Manifest:
 cat .repo/local_manifest.xml
 
-echo Syncing...
-repo sync -d #> /dev/null
-check_result "repo sync failed."
-echo Sync complete.
+#echo Syncing...
+#repo sync -d #> /dev/null
+#check_result "repo sync failed."
+#echo Sync complete.
 
 if [ -f $WORKSPACE/hudson/$REPO_BRANCH-setup.sh ]
 then
