@@ -59,6 +59,7 @@ unset BUILD_NUMBER
 export PATH=~/bin:$PATH
 export BUILD_WITH_COLORS=0
 export USE_CCACHE=1
+export CCACHE_NLEVELS=4
 export CCACHE_COMPILERCHECK=none
 export FAST_BUILD=1
 
