@@ -35,10 +35,10 @@ do
         echo "$proj_credit Project name: $project" >> "$WORKSPACE"/archive/changelog.txt
         echo "$log" | while read line
         do
-             echo "  *"${line}"" >> "$WORKSPACE"/archive/Changelog_$cdate.txt
+             echo "  *"${line}"" >> "$WORKSPACE"/archive/changelog.txt
         done
         echo "" >> "$WORKSPACE"/archive/changelog.txt
-        zip -r "$WORKSPACE"/archive/*akop*.zip "$WORKSPACE"/archive/changelog.txt
+        find . -name *aokp_\*${DATE}*.zip -exec zip {} "$WORKSPACE"/archive/changelog.txt \;
     fi
 done
 
