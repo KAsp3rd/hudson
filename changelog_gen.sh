@@ -43,7 +43,10 @@ do
         echo "" >> "$WORKSPACE"/archive/changelog.txt
     fi
 done
-        
-    find . -name *aokp_\*${DATE}*.zip -exec zip {} "$WORKSPACE"/archive/changelog.txt \;
+
+#move the changelog into .zip for goo integration
+    cd "$WORKSPACE"/archive    
+    find . -name *aokp_\*${DATE}*.zip -exec zip {} changelog.txt \;
+    cd ..
 
 exit 0
