@@ -40,6 +40,7 @@ do
              echo "  *"${line}"" >> "$WORKSPACE"/archive/Changelog_$cdate.txt
         done
         echo "" >> "$WORKSPACE"/archive/Changelog_$cdate.txt
+        zip -r "$WORKSPACE"/archive/$OUTFILE "$WORKSPACE"/archive/Changelog_$cdate.txt
     fi
 done
 
