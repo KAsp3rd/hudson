@@ -39,8 +39,9 @@ do
              echo "  *"${line}"" >> "$WORKSPACE"/archive/changelog.txt
         done
         echo "" >> "$WORKSPACE"/archive/changelog.txt
-        find . -name *aokp_\*${DATE}*.zip -exec zip {} "$WORKSPACE"/archive/changelog.txt \;
     fi
 done
+        
+    find . -name *aokp_\*${DATE}*.zip -exec zip {} "$WORKSPACE"/archive/changelog.txt \;
 
 exit 0
