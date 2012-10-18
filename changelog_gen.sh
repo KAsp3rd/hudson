@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DATE=$(shell date +"%Y%m%d")
+DATE=$(vendor/aokp/tools/getdate)
 ydate=$(date -d '1 day ago' +"%m/%d/%Y")
 sdate=${1}
 cdate=`date +"%m_%d_%Y"`
