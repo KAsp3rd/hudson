@@ -35,7 +35,7 @@ do
         echo "$proj_credit Project name: $project" >> "$WORKSPACE"/archive/Changelog_$cdate.txt
         echo "$log" | while read line
         do
-             echo "  •$line" >> "$WORKSPACE"/archive/Changelog_$cdate.txt
+             echo "  *"${line}"" >> "$WORKSPACE"/archive/Changelog_$cdate.txt
         done
         echo "" >> "$WORKSPACE"/archive/Changelog_$cdate.txt
     fi
