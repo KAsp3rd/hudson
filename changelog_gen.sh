@@ -29,6 +29,8 @@ do
             proj_credit=AOSP
         elif [ "$origin" = "cm" ]; then
             proj_credit=CyanogenMod
+        elif [ "$origin" = "faux" ]; then
+            proj_credit=Faux123
         else
             proj_credit=""
         fi
