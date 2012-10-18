@@ -1,5 +1,6 @@
 #!/bin/sh
 
+DATE=$(shell date +"%Y%m%d")
 ydate=$(date -d '1 day ago' +"%m/%d/%Y")
 sdate=${1}
 cdate=`date +"%m_%d_%Y"`
