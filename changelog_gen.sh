@@ -32,13 +32,13 @@ do
             proj_credit=""
         fi
         # Write the changelog
-        echo "$proj_credit Project name: $project" >> "$WORKSPACE"/archive/Changelog_$cdate.txt
+        echo "$proj_credit Project name: $project" >> "$WORKSPACE"/archive/changelog.txt
         echo "$log" | while read line
         do
              echo "  *"${line}"" >> "$WORKSPACE"/archive/Changelog_$cdate.txt
         done
-        echo "" >> "$WORKSPACE"/archive/Changelog_$cdate.txt
-        zip -r "$WORKSPACE"/archive/$OUTFILE "$WORKSPACE"/archive/Changelog_$cdate.txt
+        echo "" >> "$WORKSPACE"/archive/changelog.txt
+        zip -r "$WORKSPACE"/archive/*akop*.zip "$WORKSPACE"/archive/changelog.txt
     fi
 done
 
