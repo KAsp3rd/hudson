@@ -5,8 +5,6 @@ sdate=${1}
 cdate=`date +"%m_%d_%Y"`
 rdir=`pwd`
 
-export $cdate
-
 # Check the date start range is set
 if [ -z "$sdate" ]; then
     sdate=${ydate}
