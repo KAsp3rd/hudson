@@ -49,4 +49,7 @@ done
     find . -name *aokp_\*${DATE}*.zip -exec zip {} changelog.txt \;
     cd ..
 
+#remove changelog after pushing into .zip
+rm "$WORKSPACE"/archive/changelog.txt
+
 exit 0
