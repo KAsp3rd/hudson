@@ -66,7 +66,6 @@ export CCACHE_COMPILERCHECK=none
 export USE_CCACHE=1
 export FAST_BUILD=1
 export CUSTOM_CCACHE_PATH=/usr/local/bin
-export OUT_DIR_COMMON_BASE=/jenkins_out
 REPO=$(which repo)
 if [ -z "$REPO" ]
 then
@@ -143,7 +142,7 @@ make $CLEAN_TYPE
 time brunch $LUNCH
 check_result "Build failed."
 
-cp $OUT/aokp*${DATE}.zip $WORKSPACE/archive
+cp $OUT/aokp*${DATE}*.zip $WORKSPACE/archive
 # chmod the files in case UMASK blocks permissions
 chmod -R ugo+r $WORKSPACE/archive
 
