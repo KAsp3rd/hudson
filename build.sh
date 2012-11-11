@@ -62,11 +62,11 @@ unset BUILD_NUMBER
 
 export PATH=~/bin:$PATH
 export BUILD_WITH_COLORS=1
-export CCACHE_COMPILERCHECK="none"
+export CCACHE_COMPILERCHECK=none
 export USE_CCACHE=1
 export FAST_BUILD=1
-export CUSTOM_CCACHE_PATH="/usr/local/bin"
-export OUT_DIR_COMMON_BASE="/jenkins_out"
+export CUSTOM_CCACHE_PATH=/usr/local/bin
+export OUT_DIR_COMMON_BASE=/jenkins_out
 REPO=$(which repo)
 if [ -z "$REPO" ]
 then
