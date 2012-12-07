@@ -138,7 +138,7 @@ then
 fi
 
 make $CLEAN_TYPE
-# mka bacon recoveryzip recoveryimage checkapi
+export sLUNCH=$(shell echo $(LUNCH) | cut -d_ -f2 | cut -d- -f1)
 time brunch $LUNCH
 check_result "Build failed."
 
