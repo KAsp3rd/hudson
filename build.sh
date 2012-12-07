@@ -138,7 +138,7 @@ then
 fi
 
 export sLUNCH=`echo $LUNCH|nawk -F"[-_]" '{print $2}'`
-echo sLUNCH
+echo $sLUNCH
 
 make $CLEAN_TYPE
 time brunch $LUNCH
