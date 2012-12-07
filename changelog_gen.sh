@@ -46,7 +46,7 @@ done
 
 #move the changelog into .zip for goo integration
     cd "$WORKSPACE"/archive    
-    find . -name *aokp_\*${DATE}*.zip -exec zip {} changelog.txt \;
+    find . -name *aokp_\*${sLUNCH}*.zip -exec zip {} changelog.txt \;
     cd ..
 
 #remove changelog after pushing into .zip
