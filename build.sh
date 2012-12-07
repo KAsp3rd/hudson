@@ -137,8 +137,10 @@ then
   fi
 fi
 
+export sLUNCH=`echo $LUNCH|nawk -F"[-_]" '{print $2}'`
+echo sLUNCH
+
 make $CLEAN_TYPE
-export sLUNCH=$(echo $(LUNCH) | cut -d_ -f2 | cut -d- -f1)
 time brunch $LUNCH
 check_result "Build failed."
 
