@@ -66,6 +66,8 @@ export CCACHE_COMPILERCHECK=none
 export USE_CCACHE=1
 export FAST_BUILD=1
 export CUSTOM_CCACHE_PATH=/usr/local/bin
+export JENKINS_BUILD=1
+
 REPO=$(which repo)
 if [ -z "$REPO" ]
 then
